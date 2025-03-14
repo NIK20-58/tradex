@@ -19,4 +19,4 @@ ENV SERVER_PORT=3000
 EXPOSE 3000
 
 # Command to run the application
-CMD ["npm", "run", "start"] 
+CMD ["npm", "run", "migrate", "npm", "run", "start"] 

@@ -16,8 +16,8 @@ export class TokenValidationDbHandler implements TokenValidationHandler {
 
   async onValidationComplete(result: TokenData): Promise<void> {
     try {
-      await this.tokenDbService.create(result);
-      console.log("Token data stored successfully");
+      // await this.tokenDbService.create(result);
+      // console.log("Token data stored successfully");
       
       // Notify WebSocket clients if callback is set
       if (this.onTokenCreated) {
