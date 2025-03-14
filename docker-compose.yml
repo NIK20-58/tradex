@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - SERVER_PORT=3000
+      - BITQUERY_TOKEN=${BITQUERY_TOKEN}
+      - SOLANA_RPC_URL=${SOLANA_RPC_URL:-https://api.mainnet-beta.solana.com}
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: unless-stopped 
